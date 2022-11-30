@@ -1,0 +1,19 @@
+.post__single {
+  width: 20rem !important;
+}
+
+#searchForm {
+  display: flex;
+  gap: 0.6rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+#back-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+}

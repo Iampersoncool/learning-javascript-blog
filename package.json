@@ -1,0 +1,33 @@
+{
+  "name": "learning-javascript-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@fastify/compress": "^6.2.0",
+    "@fastify/cors": "^8.2.0",
+    "@fastify/helmet": "^10.1.0",
+    "@fastify/static": "^6.5.1",
+    "@fastify/view": "^7.3.0",
+    "ejs": "^3.1.8",
+    "fastify": "^4.10.2",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.7.0",
+    "marked": "^4.2.3",
+    "moment": "^2.29.4",
+    "node-cache": "^5.1.2"
+  },
+  "nodemonConfig": {
+    "ext": "js,md"
+  }
+}
