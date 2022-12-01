@@ -64,14 +64,7 @@ app.get('/posts/:slug', (request, reply) => {
   return reply.view('./views/viewPost.ejs', { post, url });
 });
 
-if (process.env.NODE_ENV.toLowerCase() === 'production') {
-  app
-    .listen({ port, host: '0.0.0.0' })
-    .then((adress) => console.log('app listening on ' + adress))
-    .catch(console.error);
-} else {
-  app
-    .listen({ port })
-    .then((adress) => console.log('app listening on ' + adress))
-    .catch(console.error);
-}
+app
+  .listen({ port })
+  .then((adress) => console.log('app listening on ' + adress))
+  .catch(console.error);
