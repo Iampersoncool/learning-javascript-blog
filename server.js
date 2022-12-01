@@ -65,6 +65,6 @@ app.get('/posts/:slug', (request, reply) => {
 });
 
 app
-  .listen({ port, host: '0.0.0.0' })
+  .listen({ port })
   .then((adress) => console.log('app listening on ' + adress))
   .catch(console.error);
