@@ -17,7 +17,7 @@ const stuff = (app) => {
       directives: {
         defaultSrc: ["'self'"],
         scriptSrc: ["'self'"],
-        imgSrc: ["'self'", 'i.ibb.co'],
+        imgSrc: ["'self'"],
         styleSrc: ["'self'", 'cdn.jsdelivr.net'],
       },
     },
@@ -45,6 +45,13 @@ const stuff = (app) => {
 
       formatDate(date, str) {
         return moment.utc(date).format(str);
+      },
+
+      getPostsByDate(posts) {
+        return posts.sort(
+          (a, b) =>
+            moment.utc(b.frontMatter.date) - moment.utc(a.frontMatter.date)
+        );
       },
     };
 

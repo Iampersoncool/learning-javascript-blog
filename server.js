@@ -49,11 +49,18 @@ app.get('/posts/:slug', (request, reply) => {
   const { slug } = request.params;
 
   const url = `https://${request.headers.host}${request.url}`;
+  const host = `https://${request.headers.host}`;
+
+  console.log(url);
 
   if (cache.has(slug)) {
     const post = cache.get(slug);
     console.log('Using cache on route ' + request.url);
-    return reply.view('./views/viewPost.ejs', { post, url });
+    return reply.view('./views/viewPost.ejs', {
+      post,
+      url,
+      host,
+    });
   }
 
   const post = posts.find((post) => post.slug === slug);
@@ -61,7 +68,7 @@ app.get('/posts/:slug', (request, reply) => {
 
   console.log('Not using cache on route' + request.url);
   cache.set(post.slug, post);
-  return reply.view('./views/viewPost.ejs', { post, url });
+  return reply.view('./views/viewPost.ejs', { post, url, host });
 });
 
 app
