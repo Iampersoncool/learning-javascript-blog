@@ -22,7 +22,6 @@ This way isn't really that good since you have to write
 another if statement, and it doesn't look
 
 very clean(in my humble opinion).
-
 <br>
 
 I think a better way to do it is like this:
